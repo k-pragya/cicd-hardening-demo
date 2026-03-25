@@ -9,8 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      PASSWORD: mypassword123   # ❌ insecure
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run App
-        run: echo "App running"
+      - name: Print Password
+        run: echo $PASSWORD
