@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PASSWORD: mypassword123   # ❌ insecure
+      PASSWORD: ${{ secrets.PASSWORD }}   #  secure
 
     steps:
       - uses: actions/checkout@v3
